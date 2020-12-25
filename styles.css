@@ -1,0 +1,65 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #fac6a0;
+    display: flex;
+    justify-content: center;
+}
+
+.box-counter{
+    background: #ffffff;
+    width: 20em;
+    height: 20em;
+    display: grid;
+    padding: 1em;
+    gap: 2em;
+    grid-template-columns:repeat(2,1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "counter counter"                          
+                         "increment decrement" ;
+    margin-top: 20vh;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    box-shadow: 2px 2px 5px #00000048;
+}
+.box-counter__num{
+    grid-area: counter;
+    text-align: center;
+    font-size: 9em;
+    transition: color 1s ease;
+    -webkit-transition: color 1s ease;
+    -moz-transition: color 1s ease;
+    -ms-transition: color 1s ease;
+    -o-transition: color 1s ease;
+}
+
+.box-counter__button-decrement,
+.box-counter__button-increment{
+    height: 4em;
+    border: none;
+    background-color: #fdcac1;
+    cursor: pointer;
+    outline: none;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    box-shadow: 1px 1px 5px #00000048;
+}
+
+.box-counter__button-increment{
+    grid-area: increment;
+}
+
+.box-counter__button-decrement{
+    grid-area: decrement;
+}
+
